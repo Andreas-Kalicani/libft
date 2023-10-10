@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: andreasgjertsenkalicani <andreasgjertse    +#+  +:+       +#+        */
+/*   By: akalican <akalican@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/08 12:11:49 by andreasgjer       #+#    #+#             */
-/*   Updated: 2023/10/08 12:35:30 by andreasgjer      ###   ########.fr       */
+/*   Updated: 2023/10/10 12:51:30 by akalican         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

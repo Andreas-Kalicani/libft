@@ -1,39 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akalican <akalican@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/04 12:34:06 by andreasgjer       #+#    #+#             */
-/*   Updated: 2023/10/10 12:50:01 by akalican         ###   ########.fr       */
+/*   Created: 2023/10/09 13:58:54 by akalican          #+#    #+#             */
+/*   Updated: 2023/10/09 15:58:32 by akalican         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
+#include <stdio.h>
 
-void	*ft_memmove(void *dst, const void *src, size_t len)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	unsigned char *d;
-	const unsigned char *s;
+	size_t	i;
 
-	d = (unsigned char *)dst;
-	s = (const unsigned char *)src;
-	if (d == s || len == 0)
-		return (dst);
-	if (d < s || d >= s + len)
+	i = 0;
+	if (n == 0)
 	{
-		while (len--)
-			*d++ = *s++;
+		return (0);
 	}
-	else
+	while (s1[i] == s2[i] && s1[i] != '\0')
 	{
-		d += len;
-		s += len;
-		while (len--)
+		if (i < (n - 1))
 		{
-			*(d--) = *(s--);
+			i++;
+		}
+		else
+		{
+			return (0);
 		}
 	}
-	return (d);
+	return ((unsigned char)(s1[i]) - (unsigned char)(s2[i]));
 }

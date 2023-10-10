@@ -1,39 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akalican <akalican@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/04 12:34:06 by andreasgjer       #+#    #+#             */
-/*   Updated: 2023/10/10 12:50:01 by akalican         ###   ########.fr       */
+/*   Created: 2023/10/10 13:13:46 by akalican          #+#    #+#             */
+/*   Updated: 2023/10/10 15:14:27 by akalican         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
-void	*ft_memmove(void *dst, const void *src, size_t len)
+void	*ft_calloc(size_t count, size_t size)
 {
-	unsigned char *d;
-	const unsigned char *s;
+	void *new;
+	size_t total;
 
-	d = (unsigned char *)dst;
-	s = (const unsigned char *)src;
-	if (d == s || len == 0)
-		return (dst);
-	if (d < s || d >= s + len)
+	total = count * size;
+	if (count != '\0' && total / count != size)
 	{
-		while (len--)
-			*d++ = *s++;
+		return (NULL);
 	}
-	else
+	new = malloc(total);
+	if (!new)
 	{
-		d += len;
-		s += len;
-		while (len--)
-		{
-			*(d--) = *(s--);
-		}
+		return (NULL);
 	}
-	return (d);
+	ft_memset(new, 0, total);
+	return (new);
 }
