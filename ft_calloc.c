@@ -6,7 +6,7 @@
 /*   By: akalican <akalican@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 13:13:46 by akalican          #+#    #+#             */
-/*   Updated: 2023/10/10 15:14:27 by akalican         ###   ########.fr       */
+/*   Updated: 2023/10/13 13:59:55 by akalican         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	*ft_calloc(size_t count, size_t size)
 {
-	void *new;
-	size_t total;
+	void	*new;
+	size_t	total;
 
 	total = count * size;
 	if (count != '\0' && total / count != size)

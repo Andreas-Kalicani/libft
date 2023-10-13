@@ -6,7 +6,7 @@
 /*   By: akalican <akalican@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 17:45:50 by akalican          #+#    #+#             */
-/*   Updated: 2023/10/09 17:54:40 by akalican         ###   ########.fr       */
+/*   Updated: 2023/10/13 14:18:10 by akalican         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	unsigned long i;
-	int j;
+	unsigned long	i;
+	int				j;
 
 	i = 0;
 	j = 0;

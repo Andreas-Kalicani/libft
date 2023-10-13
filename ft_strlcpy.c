@@ -6,7 +6,7 @@
 /*   By: akalican <akalican@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 14:00:33 by andreasgjer       #+#    #+#             */
-/*   Updated: 2023/10/10 13:15:19 by akalican         ###   ########.fr       */
+/*   Updated: 2023/10/13 14:11:56 by akalican         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 size_t	ft_strlcpy(char *restrict dst, const char *restrict src, size_t dstsize)
 {
-	size_t  i;
+	size_t	i;
 
 	i = 0;
 	if (dstsize == 0)

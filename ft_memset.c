@@ -6,7 +6,7 @@
 /*   By: akalican <akalican@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/02 15:00:38 by andreasgjer       #+#    #+#             */
-/*   Updated: 2023/10/10 13:17:45 by akalican         ###   ########.fr       */
+/*   Updated: 2023/10/13 14:06:46 by akalican         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memset(void *b, int c, size_t len)
 {
-	unsigned    char	*ptr;
+	unsigned char	*ptr;
 
 	ptr = (unsigned char *)b;
 	while (len--)

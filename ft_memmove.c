@@ -6,7 +6,7 @@
 /*   By: akalican <akalican@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 12:34:06 by andreasgjer       #+#    #+#             */
-/*   Updated: 2023/10/10 12:50:01 by akalican         ###   ########.fr       */
+/*   Updated: 2023/10/13 14:06:37 by akalican         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	unsigned char *d;
-	const unsigned char *s;
+	unsigned char		*d;
+	const unsigned char	*s;
 
 	d = (unsigned char *)dst;
 	s = (const unsigned char *)src;

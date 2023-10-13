@@ -6,7 +6,7 @@
 /*   By: akalican <akalican@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 14:04:29 by akalican          #+#    #+#             */
-/*   Updated: 2023/10/12 15:24:44 by akalican         ###   ########.fr       */
+/*   Updated: 2023/10/13 14:58:31 by akalican         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,19 @@
 static size_t	get_digits(int n)
 {
 	size_t	i;
+	int		temp;
 
 	i = 1;
-	while (n /= 10)
+	temp = n;
+	while (temp / 10 != 0 || temp % 10 != 0)
+	{
 		i++;
+		temp = temp / 10;
+	}
 	return (i);
 }
 
-char			*ft_itoa(int n)
+char	*ft_itoa(int n)
 {
 	char		*string_num;
 	size_t		digits;
@@ -36,7 +41,8 @@ char			*ft_itoa(int n)
 		num *= -1;
 		digits++;
 	}
-	if (!(string_num = (char *)malloc(sizeof(char) * (digits + 1))))
+	string_num = (char *)malloc(sizeof(char) * (digits + 1));
+	if (!string_num)
 		return (NULL);
 	*(string_num + digits) = 0;
 	while (digits--)
@@ -47,4 +53,9 @@ char			*ft_itoa(int n)
 	if (n < 0)
 		*(string_num + 0) = '-';
 	return (string_num);
+}
+
+int	main(void)
+{
+	printf("%s", ft_itoa(12314));
 }

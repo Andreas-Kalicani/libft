@@ -6,12 +6,11 @@
 /*   By: akalican <akalican@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 12:10:25 by akalican          #+#    #+#             */
-/*   Updated: 2023/10/12 13:14:36 by akalican         ###   ########.fr       */
+/*   Updated: 2023/10/13 14:18:29 by akalican         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "stdio.h"
 
 static int	is_in_set(char c, const char *set)
 {
