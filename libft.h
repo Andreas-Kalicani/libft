@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akalican <akalican@student.42.fr>          +#+  +:+       +#+        */
+/*   By: andreasgjertsenkalicani <andreasgjertse    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 15:07:42 by andreasgjer       #+#    #+#             */
-/*   Updated: 2023/10/12 15:38:29 by akalican         ###   ########.fr       */
+/*   Updated: 2023/10/13 11:23:24 by andreasgjer      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,4 +46,5 @@ char	**ft_split(char const *s, char c);
 int		ft_atoi(const char *str);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putchar_fd(char c, int fd);
+char    *ft_strmapi(char const *s, char (*f)(unsigned int, char));
 #endif
