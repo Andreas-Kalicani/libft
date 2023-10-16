@@ -6,7 +6,7 @@
 /*   By: akalican <akalican@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 14:21:38 by akalican          #+#    #+#             */
-/*   Updated: 2023/10/16 15:05:05 by akalican         ###   ########.fr       */
+/*   Updated: 2023/10/16 15:20:49 by akalican         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	while (lst)
 	{
 		new_lst->next = ft_lstnew(f(lst - content));
-		if (!new_lst->)
+		if (!new_lst->next)
 		{
 			ft_lstclear(&saved, del);
 			return (NULL);
