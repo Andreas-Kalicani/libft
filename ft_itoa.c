@@ -6,56 +6,52 @@
 /*   By: akalican <akalican@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 14:04:29 by akalican          #+#    #+#             */
-/*   Updated: 2023/10/13 14:58:31 by akalican         ###   ########.fr       */
+/*   Updated: 2023/10/17 15:43:15 by akalican         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
 
-static size_t	get_digits(int n)
+static int	size_str(int n)
 {
-	size_t	i;
-	int		temp;
+	int	len;
 
-	i = 1;
-	temp = n;
-	while (temp / 10 != 0 || temp % 10 != 0)
+	len = 0;
+	if (n == 0)
+		len = 1;
+	while (n)
 	{
-		i++;
-		temp = temp / 10;
+		n = n / 10;
+		len++;
 	}
-	return (i);
+	return (len);
 }
 
 char	*ft_itoa(int n)
 {
-	char		*string_num;
-	size_t		digits;
-	long int	num;
+	int				len;
+	unsigned int	tmp;
+	char			*str;
 
-	num = n;
-	digits = get_digits(n);
+	len = size_str(n);
+	tmp = n;
 	if (n < 0)
 	{
-		num *= -1;
-		digits++;
+		len++;
+		tmp = -tmp;
 	}
-	string_num = (char *)malloc(sizeof(char) * (digits + 1));
-	if (!string_num)
+	str = malloc(sizeof(*str) * (len + 1));
+	if (!str)
 		return (NULL);
-	*(string_num + digits) = 0;
-	while (digits--)
+	str[len] = '\0';
+	while (len)
 	{
-		*(string_num + digits) = num % 10 + '0';
-		num = num / 10;
+		str[len - 1] = tmp % 10 + '0';
+		tmp = tmp / 10;
+		len--;
 	}
 	if (n < 0)
-		*(string_num + 0) = '-';
-	return (string_num);
-}
-
-int	main(void)
-{
-	printf("%s", ft_itoa(12314));
+		str[0] = '-';
+	return (str);
 }

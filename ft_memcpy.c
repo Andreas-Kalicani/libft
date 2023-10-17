@@ -6,23 +6,21 @@
 /*   By: akalican <akalican@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 14:01:43 by andreasgjer       #+#    #+#             */
-/*   Updated: 2023/10/10 11:59:47 by akalican         ###   ########.fr       */
+/*   Updated: 2023/10/17 15:23:44 by akalican         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stddef.h>
 
-void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	unsigned char		*dest;
-	const unsigned char	*source;
-
-	dest = (unsigned char *)dst;
-	source = (const unsigned char *)src;
-	while (n--)
+	if (!dest && !src)
+		return (NULL);
+	while (n)
 	{
-		dest[n] = source[n];
+		n--;
+		((unsigned char *)dest)[n] = ((unsigned char *)src)[n];
 	}
 	return (dest);
 }

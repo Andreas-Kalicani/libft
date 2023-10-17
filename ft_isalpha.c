@@ -6,28 +6,13 @@
 /*   By: akalican <akalican@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 15:13:01 by andreasgjer       #+#    #+#             */
-/*   Updated: 2023/10/13 14:10:33 by akalican         ###   ########.fr       */
+/*   Updated: 2023/10/17 15:31:13 by akalican         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalpha(unsigned char str)
+int	ft_isalpha(int c)
 {
-	while (str)
-	{
-		if (str >= 'a' && str <= 'z')
-		{
-			return (1);
-		}
-		if (str >= 'A' && str <= 'Z')
-		{
-			return (1);
-		}
-		else
-		{
-			return (0);
-		}
-	}
-	return (0);
+	return ((c >= 65 && c <= 90) || (c >= 97 && c <= 122));
 }

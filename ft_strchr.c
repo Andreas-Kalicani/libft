@@ -6,7 +6,7 @@
 /*   By: akalican <akalican@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/08 12:11:49 by andreasgjer       #+#    #+#             */
-/*   Updated: 2023/10/12 13:15:00 by akalican         ###   ########.fr       */
+/*   Updated: 2023/10/17 15:26:58 by akalican         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,8 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	char	*str;
-
-	str = (char *)s;
-	while (*str != c)
-	{
-		if (*str == '\0')
-		{
+	while (*s != (char)c)
+		if (!*s++)
 			return (0);
-		}
-		str++;
-	}
-	return (str);
+	return ((char *)s);
 }

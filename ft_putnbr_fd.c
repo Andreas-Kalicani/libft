@@ -6,7 +6,7 @@
 /*   By: akalican <akalican@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 12:06:43 by akalican          #+#    #+#             */
-/*   Updated: 2023/10/13 14:07:06 by akalican         ###   ########.fr       */
+/*   Updated: 2023/10/17 15:10:30 by akalican         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,19 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	if (n < 0)
+	long long int	t;
+
+	t = n;
+	if (t < 0)
 	{
+		t *= -1;
 		ft_putchar_fd('-', fd);
-		n = -n;
 	}
-	if (n >= 10)
+	if (t > 9)
 	{
-		ft_putnbr_fd(n / 10, fd);
-		n = n % 10;
+		ft_putnbr_fd((t / 10), fd);
+		ft_putchar_fd((t % 10 + '0'), fd);
 	}
-	if (n < 10)
-		ft_putchar_fd(n + 48, fd);
+	else
+		ft_putchar_fd((t + '0'), fd);
 }

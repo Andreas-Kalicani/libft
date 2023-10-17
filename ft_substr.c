@@ -6,7 +6,7 @@
 /*   By: akalican <akalican@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 15:31:09 by akalican          #+#    #+#             */
-/*   Updated: 2023/10/13 14:18:24 by akalican         ###   ########.fr       */
+/*   Updated: 2023/10/17 14:44:04 by akalican         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,29 +14,27 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char		*substring;
-	char		*dest;
-	const char	*src;
+	char	*result;
+	size_t	size;
+	size_t	i;
 
-	if (!s || len == 0)
-		return (NULL);
-	substring = (char *)malloc(len + 1);
-	if (!substring)
+	size = ft_strlen(s);
+	if (size < start + len && size > start)
+		len = size - start;
+	else if (size <= start)
 	{
-		return (NULL);
+		len = 0;
+		start = 0;
 	}
-	dest = substring;
-	src = s;
-	while (start > 0 && *src)
+	result = malloc(sizeof(char) * len + 1);
+	if (!result)
+		return (NULL);
+	i = 0;
+	while (s[start] && len)
 	{
-		src++;
-		start--;
-	}
-	while (len > 0 && *src)
-	{
-		*dest++ = *src++;
 		len--;
+		result[i++] = s[start++];
 	}
-	*dest = '\0';
-	return (substring);
+	result[i] = '\0';
+	return (result);
 }

@@ -6,7 +6,7 @@
 /*   By: akalican <akalican@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/22 09:49:02 by andreasgjer       #+#    #+#             */
-/*   Updated: 2023/10/13 14:11:07 by akalican         ###   ########.fr       */
+/*   Updated: 2023/10/17 14:38:41 by akalican         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,9 @@
 
 int	ft_isascii(int c)
 {
-	while (c)
+	if (c >= 0 && c <= 127)
 	{
-		if (c >= 0 && c <= 0177)
-		{
-			return (1);
-		}
+		return (1);
 	}
 	return (0);
 }
