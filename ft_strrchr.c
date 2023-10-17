@@ -6,11 +6,11 @@
 /*   By: akalican <akalican@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/08 13:20:49 by andreasgjer       #+#    #+#             */
-/*   Updated: 2023/10/09 15:59:36 by akalican         ###   ########.fr       */
+/*   Updated: 2023/10/17 13:54:48 by akalican         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 char	*ft_strrchr(const char *str, int c)
 {
