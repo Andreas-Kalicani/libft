@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akalican <akalican@student.42.fr>          +#+  +:+       +#+        */
+/*   By: andreasgjertsenkalicani <andreasgjertse    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 14:04:29 by akalican          #+#    #+#             */
-/*   Updated: 2023/10/17 15:43:15 by akalican         ###   ########.fr       */
+/*   Updated: 2023/10/18 10:09:04 by andreasgjer      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 static int	size_str(int n)
 {

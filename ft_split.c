@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akalican <akalican@student.42.fr>          +#+  +:+       +#+        */
+/*   By: andreasgjertsenkalicani <andreasgjertse    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 11:03:12 by akalican          #+#    #+#             */
-/*   Updated: 2023/10/17 16:53:29 by akalican         ###   ########.fr       */
+/*   Updated: 2023/10/18 13:09:51 by andreasgjer      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,16 +63,16 @@ static char	*malloc_word(char const *s, char c)
 	return (word);
 }
 
-static void	free_all(char ***result, size_t words)
+static void	set_free(char ***result, size_t words)
 {
-	size_t	count;
+	size_t	index;
 	size_t	i;
 
-	count = -1;
+	index = -1;
 	i = -1;
-	while (words > ++count)
+	while (words > ++index)
 	{
-		if ((*result)[count] == NULL)
+		if ((*result)[index] == NULL)
 		{
 			while (words > ++i)
 			{
@@ -111,6 +111,6 @@ char	**ft_split(char const *s, char c)
 			s++;
 	}
 	split_arr[i] = NULL;
-	free_all(&split_arr, words);
+	set_free(&split_arr, words);
 	return (split_arr);
 }
